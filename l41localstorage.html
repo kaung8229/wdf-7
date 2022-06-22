@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Local Storage</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+
+        // Local Storage
+
+        // store
+        // localStorage.setItem('name','aung');
+        // localStorage.setItem('age', 20);
+
+
+        //Update
+        // method 1
+        localStorage.setItem('name','kyaw');// like overwrite
+
+        // method 2
+        localStorage.age = 30; // like assignment
+
+
+        // Get
+        let name = localStorage.getItem('name');
+        console.log(name);
+        console.log(typeof name); // string
+
+        let age = localStorage.getItem('age');
+        console.log(age);
+        console.log(typeof age); // string
+
+
+        // Delete/Destory
+        // Method 1 (single delete)
+        // localStorage.removeItem('name');
+        // localStorage.removeItem('age');
+
+        // Method 2 (all delete)
+        localStorage.clear();
+
+
+        console.warn(".session");
+
+        // ........................
+
+        //Session Storage
+
+        //Store
+        sessionStorage.setItem('name','Su Su');
+        sessionStorage.setItem('age',30);
+
+
+        //Update
+        //Method 1
+        sessionStorage.setItem('name','Yu Yu');
+
+        //Method 2
+        sessionStorage.age = 40;
+
+
+        //Get
+        let getname = sessionStorage.getItem('name');
+        console.log(getname);
+        console.log(typeof getname);//String
+        
+        let getage = sessionStorage.getItem('age');
+        console.log(getage);
+        console.log(typeof getage); //String
+
+
+        //Delete/Destory
+        //Method 1 (Single delete)
+        sessionStorage.removeItem('name');
+
+        // Method 2 (all delete)
+        sessionStorage.clear();
+
+
+
+    </script>
+
+</body>
+</html>

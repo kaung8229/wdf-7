@@ -1,0 +1,130 @@
+.containerone .circle1{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        yellow,
+        red,
+        blue,
+        cyan
+    );
+}
+.containerone .circle2{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        yellow,
+        red,
+        blue,
+        cyan
+    );
+}
+.containerone .circle3{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        yellow,
+        red,
+        blue,
+        cyan
+    );
+}
+
+.containerone .circle4{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        red 40%,
+        yellow 0% 60%, /*0% for red to stop*/
+        blue 0% /*0% for yellow to stop*/
+    );
+}
+
+.containertwo{
+    width: 600px;
+    height: 300px;
+    background: pink;
+
+    display: flex;
+    justify-content: center; /* hz center */ /* only work width 'display: flex;' */
+    align-items: center; /* vt center */ /* only work width 'display: flex;' */
+
+    /* if use relative, its childs can't go to body and can go to its parent area. */
+    position: relative;
+}
+
+.containertwo .c1{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: black;
+
+    /* if use absolute, can go to body (default) and can use "top, right, bottom, left" */
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+
+    position: absolute;
+
+    /* Every elements have z-index = 0 */
+    z-index: 1;
+}
+
+.containertwo .c2{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background-color: blue;
+    /* background: conic-gradient(
+        red,
+        violet 30%,
+        red 0%,
+        blue 70%,
+        red 0%,
+        yellow
+    ); */
+
+    position: absolute;
+}
+
+.pointercontainer{
+    width: 20px;
+    height: 200px;
+    /* background-color: gray; */
+
+    position: absolute;
+    top: -50px;
+    z-index: 2;
+
+    /* animation-name: ani; */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    transform-origin: bottom;
+}
+
+.pointer{
+    width: 20px;
+    height: 20px;
+    background: red;
+
+    display: block;
+    border-radius: 50%;
+}
+
+@keyframes ani{
+    
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        /* transform: rotate(360deg); */
+        transform: rotate(-360deg);
+    }
+
+}

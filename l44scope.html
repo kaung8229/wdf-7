@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scope</title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+
+        // const name = "zaw zaw";
+            // name = "kyaw kyaw";//error
+        // const name = "maw maw"; //error
+        // console.log(name);
+
+
+        // let name = "yu yu";
+            // name = "mya mya";
+        // let name = "mya mya"; // error
+        // console.log(name);
+
+
+        // var name = "su su";
+        //     name = "nu nu";
+        // var name = "pu pu";
+        // console.log(name);
+
+// ---------------------------------------------
+
+        //GLobal Scope
+
+        var a = 1;
+        let b = 2;
+        const c = 3;
+
+        // a = 10;
+        // b = 20;
+        // c = 30; //error
+
+        console.log("Global scope = ",a,b,c);
+
+        //Global scope variable in function
+        //use
+        function myfunone(){
+            return a+b+c;
+        }
+        console.log("Global scope variable in function = " + myfunone());
+
+        //overwrite
+        function myfuntwo(){
+            a = 10;
+            b = 20;
+            // c = 30; //error
+
+            console.log("Overwrite / global scope variable in function = ",a,b,c);
+        }
+        myfuntwo();
+        console.log("Global scope = ",a,b,c);
+
+
+        var x = 1;
+        let y = 2;
+        const z = 3;
+
+        //Declare
+        function myfunthree(){
+            var x = 4;
+            let y = 5;
+            const z = 6;
+
+            console.log("Declare / Global scope variable in function = ",x,y,z);
+
+
+            var h = 100;
+            let i = 200;
+            const j = 300;
+
+            console.log("new declare variable (h,i,j) in function = ",h,i,j);
+        }
+        myfunthree();
+        console.log("Global scope = ",x,y,z);
+        // console.log(h,i,j); //error
+        
+// ------------------------------------------
+
+        
+        var e = 11;
+        let f = 22;
+        const g = 33;
+
+        console.log("Global scope = ",e,f,g);
+
+        //Global scope variable in Statement
+        //use
+        if(true){
+            console.log("Global scope variable in Statement = ",e,f,g)
+        }
+
+
+        //overwrite
+        if(true){
+            e = 10;
+            f = 20;
+            // g = 30; //error
+
+            console.log('Global scope variable in Statement(overwrite) = ',e,f,g);
+        }
+        console.log("Global scope = ",e,f,g);
+
+
+        //Declare
+
+        var m = 0;
+        let n = 2;
+        const o = 3;
+
+        if(true){
+            var m = 4;
+            let n = 5;
+            const o = 6;
+
+            console.log('Global scope variable in Statement(Declare) = ',m,n,o);
+
+            // new delcare
+            var q = 100;
+            let r = 200;
+            const s = 300;
+
+            console.log("new declare variable (q,r,s) in statement = ",q,r,s)
+        }
+        console.log("Global scope = ",m,n,o);
+        console.log("Global scope = ",q); // result q = 100 cuz var / r,s is not defined
+
+
+// ------------------------------------------
+
+        //loop
+
+        // for(const x = 0; x < 10; x++){
+        //     console.log(x); //result - 0 and error cuz const
+        // }
+
+        for(let d = 0; d < 10; d++){
+            console.log(d);
+        }
+        // console.log("d outside value is = ",d); //error , d is not defined
+
+        console.warn(".");
+
+        for(var e = 0; e < 10; e++){
+            console.log(e);
+        }
+        console.log("e outside value is ",e);
+
+        console.warn();
+
+
+        var num1 = 0;
+        let num2 = 0;
+        const num3 = 0;
+
+        for(num1; num1 < 10; num1++){
+            console.log("num1 value is ",num1);
+        }
+        console.log("num1 value outside ",num1);
+
+
+        for(num2; num2 < 10; num2++){
+            console.log("num2 value is ",num2);
+        }
+        console.log("num2 value outside is ",num2);
+
+
+        // for(num3; num3 < 10; num3++){
+        //     console.log("num3 value is ",num3);
+        // }
+        // console.log("num3 value outside is ",num3);
+        // result = 0 and error cuz const\
+
+
+        var num5 = 1;
+        let num6 = 2;
+        const num7 = 3;
+
+
+        for(var num5 = 0; num5 < 10; num5++){
+            console.log("forloop var num5 = ",num5);
+        }
+        console.log("Global scope = ",num5);
+
+
+        for(let num6 = 0; num6 < 10; num6++){
+            console.log("forloop let num6 = ",num6);
+        }
+        console.log("Global scope = ",num6);
+
+
+        // for(num7=0;num7<10;num7++){
+        //     console.log("forloop var num7 ",num7);
+        // }
+        // console.log("Global scope = ",num7);
+
+
+
+        //Object
+
+        var student = {
+            fullname : "aung kyaw kyaw",
+            age : 20,
+            phone: "123456"
+        }
+
+        console.log(student);
+        console.log(student.fullname,student.age,student.phone);
+
+        // new key create
+        student.city = "mandalay";
+        console.log(student);
+        console.log(student.city);
+
+        //key overwrite
+        student.age = 30;
+        console.log(student);
+        console.log(student.age);
+
+        //object renew
+        student = {
+            fullname : "aung kyaw kyaw"
+        }
+        console.log(student);
+        console.log(student.fullname,student.age,student.phone);
+
+
+
+
+        let members = {
+            fullname : "mya mya",
+            age : 18,
+            phone: "123456"
+        }
+
+        console.log(members);
+        console.log(members.fullname,members.age,members.phone);
+
+        //key create
+        members.city = "yangon";
+        console.log(members);
+        console.log(members.city);
+
+        //overwrite
+        members.age = 20;
+        console.log(members);
+        console.log(members.age);
+
+        //renew
+        members = {
+            fullname : "aye aye"
+        }
+        console.log(members);
+
+        console.log(members.fullname,members.age,members.phone);
+
+
+
+        const customers = {
+            fullname : "kyaw zaya",
+            age : 20,
+            phone: "123456"
+        }
+        
+        console.log(customers);
+        console.log(customers.fullname,customers.age,customers.phone);
+
+        //key create
+        customers.city = "yangon";
+        console.log(customers);
+        console.log(customers.city);
+
+        //overwrite
+        customers.age = 30;
+        console.log(customers);
+        console.log(customers.age);
+
+        //renew
+        // customers = {
+        //     fullname : "aye aye"
+        // }
+        // console.log(customers);
+
+        console.log(customers.fullname,customers.age,customers.phone);
+
+
+
+// ------------------------------------------
+
+
+        //Array
+
+        var arrboys = ["aung","kyaw","zaw"];
+        console.log(arrboys);
+
+        // whole array overwrite
+        var arrboys = ['naung','maung','naw'];
+        console.log(arrboys);
+
+        // value overwrite
+        arrboys[0] = 'tun tun';
+        console.log(arrboys);
+
+        // input a new value with index
+        arrboys[3] = 'thaung thaung';
+        console.log(arrboys);
+
+        // input a new value with push method
+        arrboys.push("kaung");
+        console.log(arrboys);
+
+        
+
+
+
+        let arrgirls = ['aye','chan','mya'];
+        console.log(arrgirls);
+
+        // whole array overwrite
+        arrgirls = ['su','nu','pu'];
+        console.log(arrgirls);
+
+        // value overwrite
+        arrgirls[0] = 'swe';
+        console.log(arrgirls);
+
+        // input a new value with index
+        arrgirls[3] = 'htwe';
+        console.log(arrgirls);
+
+        // input a new value with push method
+        arrgirls.push('nway');
+        console.log(arrgirls);
+
+
+
+        const arrcolors = ['blue','white','gray'];
+
+        // whole array overwrite // error
+        // arrcolors = ['green','pink','yellow'];
+        // console.log(arrcolors);
+
+        arrcolors[0] = 'red';
+        console.log(arrcolors);
+
+        arrcolors[3] = 'silver';
+        console.log(arrcolors);
+
+        arrcolors.push('black');
+        console.log(arrcolors);
+    </script>
+
+</body>
+</html>

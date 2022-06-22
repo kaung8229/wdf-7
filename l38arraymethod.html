@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+        // Array method
+
+        let arrcolors = ["red","black","orange","tomato","violet"];
+
+        console.log(arrcolors);
+        console.log(arrcolors.length);
+        console.log(arrcolors[3]);
+		console.log(arrcolors.indexOf("violet"));
+
+        //Charater Array in js
+        let myfriend = "Aung Kyaw Kyaw";
+
+        console.log(Array.isArray(arrcolors));
+        console.log(Array.isArray(myfriend));
+
+        // Join method()
+                        // default - divide by comma(,)
+        console.log(arrcolors.toString());
+
+                        // as you like - divide by /
+        console.log(arrcolors.join("/"));
+
+
+        let arr = ["a","b","c"];
+
+        // add new data from end
+        arr.push("A","B","C");
+        console.log(arr);
+
+        // add new data from start
+        arr.unshift("A","B","C");
+        console.log(arr);
+
+        // remove data from start (both index and value)
+        // write one time => take of one time || if two - two
+        arr.shift();
+        arr.shift();
+        console.log(arr);
+
+        // remove data from end (both index and value)
+        // write one time => take of one time || if two - two
+        arr.pop();
+        arr.pop();
+        console.log(arr);
+
+        // keyword (delete)
+
+        delete arr[2];
+
+        console.log(arr);
+        console.log(arr[2]);
+
+
+        // splice(index,length(space))
+        let q = arr.splice(0,2);
+        console.log(q);
+        console.log(q.length);
+
+        
+        let arr1 = ["aung","kyaw","zaw"];
+        let arr2 = ["su","htet","lu"];
+
+        // console.log(arr1+arr2); // string data type change
+
+        console.log(arr1.concat(arr2));
+        console.log(arr2.concat(arr1));
+        console.log(arr1.concat(arr1));
+
+        // Array Sorting
+        let arrsort = arr1.concat(arr2);
+
+        console.log(arrsort);
+
+        // sort() => only string // number not directly sort
+        console.log(arrsort.sort());
+
+        let arrnum = [100,20,10,5,3,60];
+        console.log(arrnum);
+        // console.log(arrnum.sort());
+
+        // reverse()
+        // console.log(arrsort.reverse());
+
+
+        // sort number widht number
+        console.log(arrnum.sort(function(x,y){
+            return x-y;  // small -> big
+        }))
+
+        console.log(arrnum.sort(function(x,y){
+            return y-x;  // big -> small
+        }))
+
+    </script>
+</body>
+</html>

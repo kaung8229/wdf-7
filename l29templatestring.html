@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Template String</title>
+    </head>
+    <body>
+        
+        <ul>
+            <li>Name: Aung Aung</li>
+            <li>Age: 25</li>
+            <li>Job: Web developer</li>
+            <li>City: Mandalay</li>
+        </ul>
+
+        <script type="text/javascript">
+
+            const name = "Kyaw Kyaw";
+            const age = 30;
+            const job = "Web Developer";
+            const city = "Yangon";
+
+            // let myliststyle; // value = undefined
+            //var myliststyle; // value = undefined
+            //const myliststyle; // error        
+            
+            // console.log(myliststyle);
+
+           
+
+            let myliststyle;
+            
+            //without template string
+
+            // myliststyle = '<ul><li>Name: '+name+'</li><li>Age: '+age+'</li><li>Job: '+job+'</li><li>City: '+city+'</li></ul>';
+
+            // myliststyle = '<ul>'+
+            //     '<li>Name: '+name+'</li>'+
+            //     '<li>Age: '+age+'</li>'+
+            //     '<li>Job: '+job+'</li>'+
+            //     '<li>City: '+city+'</li>'+
+            //     '</ul>';
+
+            // with template string
+
+            myliststyle = `
+            <ul>
+                <li>Name: ${name}</li>
+                <li>Age: ${age}</li>
+                <li>Job: ${job}</li>
+                <li>City: ${city}</li>
+            </ul>
+            `
+
+            document.write(myliststyle);
+
+        </script>
+    </body>
+</html>

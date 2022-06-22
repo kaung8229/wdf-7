@@ -1,0 +1,115 @@
+*{
+    cursor: pointer;
+}
+/* 1.Local Integrate */
+
+/*  i.  Local Machine Integrate
+    ii. Project folder Integrate */
+
+/* body{
+    font-family: Arial;
+} */
+/* .p1{
+    font-family: Helvetica;
+} */
+/* .p2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+/* ii. Project folder integrate */
+
+/* at-rules */
+@font-face{
+    font-family: Akaya;
+    src: local('AkayaKanadaka-Regular'), url('../libs/fonts/akaya/AkayaKanadaka-Regular.ttf') format("woff");
+}
+
+body{
+    font-family: 'Akaya';
+}
+
+
+
+
+
+/* 2.Global Integrate */
+
+/* body{
+    font-family: 'Stick', sans-serif;
+} */
+
+/* .p1{
+    font-family: 'Stick';
+}
+.p2{
+    font-family: 'Stick', sans-serif;
+}
+.p3{
+    font-family: 'Akaya Kanadaka', cursive;
+} */
+
+.p4{
+    font-family: arial;
+    
+    /* font-weight: bold; */
+    /* font-weight: bolder; */
+    /* font-weight: lighter; */
+
+    /* number - 100 to 900 */
+    /* font-weight: 600; */
+
+    /* font-style: italic; */
+
+    /* text-transform: uppercase; */
+    /* text-transform: lowercase; */
+    /* text-transform: capitalize; */
+
+    /* text indentation */
+    text-indent: 50px;
+}
+
+.clickme:visited{
+    color: green;
+}
+.clickme:hover{
+    color: red;
+    font-size: 18px;
+}
+
+.menutext{
+    font-family: arial;
+    text-decoration: none;
+    background: blue;
+    color: #fff;
+
+    /* padding: 10px; */
+
+        /* top&bottom  left&right */
+    /* padding: 10px 30px; */
+
+        /* top  right bottom left */
+    padding: 10px 20px 10px 20px;
+
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+}
+.menutext:hover{
+    background: cyan;
+    color: #000;
+}
+
+.imgdesign{
+    width: 80px;
+    height: 80px;
+
+    cursor: pointer;
+
+    transition: all 1s;
+}
+.imgdesign:hover{
+    width: 100px;
+    height: 100px;
+}

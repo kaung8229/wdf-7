@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array</title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+
+        const name = {
+            firstname : "aung aung",
+            lastname : "kyaw"
+        }
+
+        console.log(name.firstname, name.lastname);
+
+        const persons = {
+            person1 : "aung aung",
+            person2 : "kyaw kyaw",
+            person3 : "zaw zaw"
+        }
+
+        console.log(persons.person1, persons.person2);
+
+        //Manual Array ( array start form index number 0)
+        // Length start from 1
+
+        let arrgirls = new Array("su su", "lu lu", "hla hla");
+
+        console.log(arrgirls);
+        console.table(arrgirls);
+        console.log(arrgirls.length);
+
+        console.log(arrgirls[0]);
+        console.log(arrgirls[1]);
+        console.log(arrgirls[2]);
+        console.log(arrgirls[3]); // undefined
+
+
+        let arrnew = ['mg mg', 'm m', 'k k'];
+
+        console.log(arrnew);
+        console.log(arrnew.length);
+
+        console.log(arrnew[2]);
+        console.log(arrnew[3]);
+
+
+
+        let x = [1200,1300,1400,1500,1600,1700,1800];
+
+        console.log(x);
+        console.log(x.length);
+        console.log(x[4]);
+        console.log(typeof x[4]);
+
+        let y = ['mgmg',1500,true,undefined,null,new Date(),{fname: 'kaung', lname: 'myat'}];
+
+        console.log(y);
+        console.log(y.length);
+
+        console.log(y[1]);
+        console.log(y[5]);
+        console.log(y[6]);
+        console.log(y[6].fname);
+        console.log(y[6].lname);
+
+        let m = [1000,2000,3000,4000,5000];
+
+        console.log(m.indexOf(5000)); // 4
+        console.log(m.indexOf(6000)); // -1 
+
+        //String is character array in js
+        let str = "kaung";
+
+        console.log(str[1]); // a
+
+
+        let arr = [];
+            
+        arr[0] = "red";
+        arr[1] = "blue";
+        arr[3] = "black";
+        
+        console.log(arr);
+        console.log(arr[2]);
+    </script>
+
+</body>
+</html>

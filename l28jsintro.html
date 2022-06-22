@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS intro</title>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+
+        <h2>Hello with html code</h2>
+
+        <p id="test">Test test to change with js</p>
+
+        <hr/>
+
+        <img src="./img/shame.jpg" id="funny" alt="">
+
+        <br/><br/>
+
+        <button onclick="document.getElementById('funny').src='./img/amazing.jpg'">Amazing</button>
+        <button onclick="document.getElementById('funny').src='./img/bleh.jpg'">Bleh</button>
+        <button onclick="document.getElementById('funny').src='./img/shame.jpg'">Shame</button>
+
+
+        <script type="text/javascript">
+
+            // to print in console browser
+            console.log("Aung Aung");
+            console.log('Aung Aung');
+
+            // ` is (template string) or (backtick)
+            console.log(`Aung Aung`);
+
+            console.log(500); // number data type
+            console.log("500"); // string data type
+            console.log('500'); // string data type
+            console.log(`500`); // string data type
+
+            // multiple parameters in console
+            console.log("kyaw kyaw","zaw zaw","su su");
+            console.log(100,200,300);
+            console.log("kyaw",100,'zaw',`mg mg`);
+
+            // Comments
+
+            // Single line comment
+
+            /*
+                Multiple line comment
+            */
+
+            // window.alert("Hello");
+            // window.alert("Hi!");
+            // alert("Shortcut without window");
+
+            console.log(10+20);
+            console.log(10+"20");
+            console.log('10'+10);
+            console.log('10'+'10');
+            console.log('kyaw '+ 20);
+
+            console.log(true);
+            console.log(false);
+
+            // true = 1 / false = 0
+            console.log(true + 50);
+            console.log(false + 50);
+
+            console.log("aung " + true);
+            console.log(false + " aung");
+
+            // Variable  (var / let / const)
+            // var/let/const variablename = value;
+
+            const sayar = "Tin Htut Aung";
+
+            // does'nt work
+            console.log("sayar");
+            console.log('sayar');
+            console.log(`sayar`);
+
+            console.log(sayar); // result = Tin Htut Aung
+
+            // window.alert(sayar);
+
+            console.log("Our teacher is sayar");
+            console.log('Our teacher is sayar');
+            console.log(`Our teacher is sayar`);
+
+            console.log('Our teacher is ' + sayar);
+            console.log('Our teacher is' + ' ' + sayar);
+
+            // with two parameters
+            console.log('Our teacher is',sayar);
+
+            // Backticks (``)
+            console.log(`sayar`); //result = sayar
+            console.log(`${sayar}`); //result = Tin Htut Aung
+
+            // ${variable name} does'nt work in "" or ''
+            console.log("${sayar}"); //result=${sayar}
+            console.log('${sayar}');//result=${sayar}
+
+            console.log(`Our teacher is ${sayar}`);
+
+
+
+            var num1 = 1500;
+            var num2 = 1000;
+
+            console.log("num1+num2");
+            console.log('num1' + 'num2');
+
+            console.log(`${num1 + num2}`); //result = 2500
+            console.log(`${num1} + ${num2}`); //result = 1500 + 1000
+            console.log(`${num1}` + `${num2}`); // result = 15001000
+
+
+            // Overwrite
+            let num3 = 30;
+            var num4 = 50;
+
+            console.log("num3 is " + num3);
+            console.log("num4 is " + num4);
+
+            console.log(num3 + num4);
+
+            num3 = 50;
+            console.log("num3 is " + num3);
+            let num5 = 50;
+            console.log(num3 + num5);
+
+            let num6 = 100;//can overwrite
+            num6 = 200;
+            console.log(num6);
+
+            var num7 = 300;//can overwrite
+            num7 = 400;
+            console.log(num7);
+
+            const num8 = 500; // can't overwrite
+            //num8 = 600; 
+            console.log(num8);
+
+            // Concatenate ( + )
+
+            const name1 = "Maung Maung";
+            const name2 = "Kyaw";
+
+            console.log(name1 + " " + name2);
+
+            const greeting = "Hello";
+            const city1 = "Mandalay";
+            const city2 = "Yangon";
+
+            console.log(greeting + " " + city1 + " and " + city2)
+
+            console.log(`${greeting} ${city1} and ${city2}`);
+
+            // Write in brower body
+            // document.write(`${greeting} ${city1} and ${city2}`);
+
+            // document.write("<hr/>");
+
+            // document.write("Hello Myanmar");
+            // document.write("<hr/>");
+
+            // Special Escape Characters (\)
+            console.log("Hello" + "Hi");
+            console.log('Hello','Hi');
+
+            console.log("hello,I'm working");
+            console.log('Hello,I"m working');
+
+            let x = 'I\'m working,';
+            let y = "\"OK!\"";
+
+            console.log(`${x} ${y}`);
+
+            // Change text in html element with js
+            
+            // document.getElementById("test").textContent = "Hello i'm new text";
+            // document.getElementById("test").innerText = "Hello i'm new text";
+            document.getElementById("test").innerHTML = "Hello i'm new text";
+
+        </script>
+    </body>
+</html>
+
+<!-- DATA Type
+- string
+- number
+- boolean(true or false) --> 
+
+
+
+<!-- when build variable
+we can use
+letter, number, _ ,$
+
+var firstname
+var FirstName
+var first_name
+var _firstname
+var $firstname
+var firstname123
+
+we can't use like that
+var first name
+var first-name
+var 123 -->

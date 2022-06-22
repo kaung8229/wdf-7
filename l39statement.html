@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Statement</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		// Ternary Operator (?)
+		// condition1 compare condition2
+		// c1 > c2 ? true : false;
+	
+		const x= 100;
+		const y=200;
+
+		console.log(x > y ? "Yes, it is true" : "No, it is false" );
+		console.log(x < y ? "Yes, it is true" : "No, it is false");
+
+
+		const num1=4;
+		const num2=2;
+
+		//dont check data type and only check value
+		document.write("Eqaul to (==) result = "+ (num1==num2 ? "True" : "False" +"<br>"));
+
+
+		//check both data type and value
+		document.write("Eqaul to (===) result = "+ (num1==num2 ? "True" : "False") +"<br>");
+
+		//dont check data type and only check value
+		document.write("not eqaul to (!=) result = "+ (num1!=num2 ? "True" : "False")+"<br>");
+
+		//check both data type and value
+		document.write("not eqaul to (!==) result = "+ (num1!==num2 ? "True" : "False")+"<br>");
+
+		document.write("greater than (>) result = "+ (num1>num2 ? "True" : "False")+"<br>");
+
+		document.write("greater than or equal (>=) result = "+ (num1>=num2 ? "True" : "False")+"<br>");
+
+		document.write("less than (<) result = "+ (num1<num2 ? "True" : "False")+"<br>");
+
+		document.write("less than or equal (<=) result = "+ (num1<=num2 ? "True" : "False")+"<br>");
+
+		//if statement
+
+		// if(condition){
+		// 	codes to be execute....;
+		// }
+
+		const id=30;
+
+		if(id==30){
+
+			console.log("Correct");
+
+		}else{
+			console.log("Incorrect");
+		}
+
+		if(id=="30"){
+			console.log("Correct");
+
+		}else{
+			console.log("Incorrect");
+		}
+
+		if(id==="30"){
+			console.log("Correct");
+
+		}else{
+			console.log("Incorrect");
+		}
+
+		if(id!="30"){
+			console.log("Correct");
+
+		}else{
+			console.log("Incorrect");
+		}
+
+		if(id!=="30"){
+			console.log("Correct");
+
+		}else{
+			console.log("Incorrect");
+		}
+
+		// else if
+
+		const j=40;
+		let k=20;
+
+		if(j>k){
+			console.log("Yes, j is greater than k");
+		}else if(j==k){
+			console.log("j is eqaul to k");
+
+		}else{
+			console.log("No, j is less than k");
+		}
+
+
+			// Switch statement
+
+			// switch(condition){
+			// 	case : 
+			// 		   code to be execute;
+			// 		   break;
+
+			// 	case : 
+			// 		   code to be execute;
+			// 		   break;
+
+			// 	case : 
+			// 		   code to be execute;
+			// 		   break;
+
+			// 	default: //same as else
+			// 			code to be execute;
+						// break;
+			// 	}
+
+			const color="white";
+
+			switch(color){
+
+				case "white":
+				console.log("My fav color is not white");
+				break;
+
+				case "white":
+				console.log("My fav color is not white");
+				break;
+
+				case "white":
+				console.log("My fav color is not white");
+				break;
+
+				case "white":
+				console.log("My fav color is not white");
+				break;
+
+				default:
+				console.log("Try Again");
+				break;
+
+
+			}
+
+			let daycount= new Date().getDay();
+			//console.log(daycount);
+
+			//0 to 6
+
+			let today;
+
+			switch(daycount){
+
+				case 0:
+				        today="Sunday";
+						break;
+				case 1:
+						today="Monday";
+						break;
+
+				case 2:
+						today="Tuesday";
+						break;
+
+				case 3:
+						today="Wednesdsay";
+						break;
+
+				case 4:
+						today="Thurday";
+						break;
+
+				case 5:
+						today="Friday";
+						break;
+
+				case 6:
+						today="Saturday";
+						break;
+
+				default:
+				console.log("Try Again");
+				break;
+
+
+			}
+		document.write("today is = "+ today);
+
+		let p=10;
+		let q=50;
+		console.log(q);
+
+		// p=q;
+		// console.log(p);
+
+		// p=p+q;
+		// console.log(p);
+
+		// q= p+q;
+		// console.log(q);
+
+		// q += p;
+		// console.log(p);//60
+		// console.log(q);
+
+		// q -= p;
+		// console.log(q);//40
+		
+
+		// q *= p;
+		// console.log(q);//500
+		
+		// q /= p;
+		// console.log(q);//60
+		
+		q %= p;
+		console.log(q);//60
+
+		const username = prompt("Enter Username");
+		const password = prompt("Enter Password");
+
+		// console.log(username,password);
+
+		console.log(typeof username);
+		console.log(typeof password);
+
+
+		// if(username === "aungaung" && password === "123456"){
+			// console.log("Welcome");
+			// }else{
+			// console.log("Try Again");
+			// }
+
+		if(username === "aungaung" || password ==="123456"){
+			console.log("Welcome");
+		}else{
+			console.log("Try Again");
+		}
+
+			
+
+		
+	</script>
+
+</body>
+</html>
+
+<!-- Assignment Operators(6)
+=
++=
+-=
+*=
+/=
+%=
+
+Comparison Opertors(9)
+== equal to
+=== equal to
+!= not equal 
+!== not equal
+> greater than
+< last than
+>= greater than or equal
+<= less than or equal
+? statement (Ternary Operator)
+
+Logical Operator(3)
+and &&
+or  ||
+not ! -->

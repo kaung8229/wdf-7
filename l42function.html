@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Function</title>
+
+    <style type="text/css">
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            width: 300px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+        }
+
+        h3{
+            font-size: 23px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+
+        label{
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input{
+            display: block;
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .btn{
+            font-size: 18px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+
+        <h3>Show Name - <span id="replacename">text</span></h3>
+
+        <!-- <form> -->
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname">
+            <input type="submit" class="btn" value="Get Name" onclick="getName()">
+        <!-- </form> -->
+
+    </div>
+    
+    
+    <script type="text/javascript">
+
+        //function
+
+        // function name(){
+        //     code to be excuted;
+        // }
+        // name(); -> invoke
+
+        // Function
+
+        // 1. Regular function
+        //     (i) manual function
+        //     (ii) parameter function
+        //         (a) single paramenter function
+        //         (b) multiple parameter function
+
+        // 1. Arrow function
+        //     (i) manual function
+        //     (ii) parameter function
+        //         (a) single paramenter function
+        //         (b) multiple parameter function
+
+        function greet(){
+            console.log("hello");
+            console.log("hello");
+        }
+
+        greet();
+
+
+        // ---------------------------------
+
+
+
+        let num = 50;
+        console.log(num);
+
+        num = 100;
+        console.log(num);
+
+        hello();
+
+        function hello(){
+            console.log("hello");
+        }
+
+        hello();
+
+        function hello(){
+            console.log("Hi");
+        }
+
+        hello();
+
+
+
+        // ---------------------------------
+
+
+        function funone(){
+            console.log("func - one");
+        }
+
+        function funtwo(){
+
+            funone();
+            console.log("func - two");
+            funthree();
+            
+        }
+
+        function funthree(){
+
+            funone();
+            console.log("func - three");
+
+        }
+
+        funtwo();
+
+        // ---------------------------------
+
+        // Return
+
+        function funfour(){
+            console.log(4);
+        }
+
+        function funfive(){
+            console.log(5);
+        }
+
+        function funsix(){
+            // funfour();
+            // funfive();
+
+            // let num1 = funfour();
+            // let num2 = funfive();
+
+            // console.log(num1);// -> undefined
+            // console.log(num2);// -> undefined
+
+            // let total = num1 + num2;
+            // console.log(total); // -> NaN ( Not a Number )
+        }
+
+        funsix();
+
+        // var num1 = 200;
+        // var num2 = 300;
+        // let total = num1 + num2;
+        // console.log(total);
+
+        function funseven(){
+            return 7; // return one time
+        }
+        funseven(); // nothing printout
+
+        console.log(funseven()); // 7
+
+
+
+        function funeight(){
+            let num = 8;
+            return num;
+        }
+        funeight(); // nothing printout
+
+        console.log(funeight()); // 8
+
+
+
+        function funnine(){
+            let num1 = funseven();
+            let num2 = funeight();
+
+            console.log(num1); // 7
+
+            let total = num1 + num2;
+            console.log(total); // 15
+        }
+
+
+
+        function test(){
+            let n = 100;
+            let n2 = 200;
+            let ta = n + n2;
+
+            return "Hee Hee";
+        }
+
+        console.log(test());
+
+        // ................................
+
+            // (ii) parameter function
+            //    (a) single paramenter 
+
+        function myfun(city){
+            console.log("hello " + city);
+        }
+
+        myfun(); // Hello undefined
+        myfun("Yangon"); // Hello Yangon
+        myfun("Mandalay") // Hello Mandalay
+
+
+        // (ii) parameter function
+            //    (b) multiple paramenter 
+
+        function myfunone(name,age){
+            console.log(name,age);
+        }
+
+        myfunone("kaung",20);
+
+
+        // ----------------------------------------
+
+        // 3. Constructor Function (string structure)
+
+        const varone = new Function("j","k","return j+k");
+
+        console.log(varone(10,20)); //result = 30
+
+        console.log(varone("10", "20")); // result = 1020
+
+
+        // ----------------------------------------
+
+
+        // 4. Name less function
+
+        let varr = function (name){
+            console.log(name);
+        }
+
+        varr("aung");
+
+
+         // ----------------------------------------
+
+
+        //  5. self invoking function
+
+        (function(){
+            console.log("Hello Myanmar");
+        })();
+
+
+        (function(name){
+            console.log("Hello " + name);
+        })("Thailand");
+
+        function getName(){
+            // console.log("Hello")
+
+            let getfirstname = document.getElementById("firstname").value;
+            let getlastname = document.getElementById("lastname").value;
+
+            let replacename = document.getElementById("replacename");
+
+
+            replacename.innerHTML = `${getfirstname} ${getlastname}`;
+
+            document.getElementById("firstname").value = "";
+            document.getElementById("lastname").value = "";
+
+            document.getElementById("firstname").focus();
+
+        }
+
+    </script>
+
+</body>
+</html>

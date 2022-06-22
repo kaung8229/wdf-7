@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Numebr guess game</title>
+        <style type="text/css">
+
+            body{
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .form-control,.btn{
+                padding: 10px;
+            }
+
+            #game span{
+                display: block;
+                margin-top: 12px;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+
+            <h1>Number Guess Project</h1>
+            <p>Guess a number between <span class="minnumber"></span> to <span class="maxnumber"></span></p>
+
+            <div id="game">
+                <input type="number" name="number" id="guessnumber" class="form-control" placeholder="Enter your guess a numeber..." />
+                <input type="submit" id="btn" class="btn" value="Submit">
+
+                <span class="message1"></span>
+                <span class="message2"></span>
+            </div>
+
+        </div>
+
+
+        <script src="./js/l47numberguess.js"></script>
+    </body>
+</html>

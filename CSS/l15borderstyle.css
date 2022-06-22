@@ -1,0 +1,78 @@
+.b1{
+    border-style: solid;
+}
+.b2{
+    border-style: double;
+}
+.b3{
+    border-style: dotted;
+}
+.b4{
+    border-style: dashed;
+}
+.b5{
+    border-style: inset;
+}
+.b6{
+    border-style: outset;
+}
+
+.borderdesign{
+    width: 300px;
+    height: 300px;
+    /* background: mediumaquamarine; */
+    background-color: mediumaquamarine;
+
+    /* border-radius: 100%; */
+    /* border-radius: 50%; */
+
+    /* border-radius: 20px; */
+                /* leftup  rightup rightup leftdown */
+    border-radius: 50px 20px 50px 20px;
+
+    border: 1px solid red;
+}
+
+li{
+    /* list-style-type: circle;
+    list-style: square;
+    list-style: decimal; */
+    list-style: decimal-leading-zero;
+
+    border: 1px solid blue;
+
+    /* list-style-position: inside; */
+    list-style-position: outside;
+}
+
+textarea{
+    border-radius: 20px;
+}
+ 
+/* Attribute Selector */
+input[type="text"]{
+    border-radius: 10px;
+    color: blue;
+    width: 300px;
+    background: silver;
+}
+
+body{
+    background-image: url('../img/icon/icon1.png');
+    /* background-repeat: repeat; */
+    background-repeat: no-repeat;
+
+    /* background-position: center; */
+    /* background-position: left; */
+    /* background-position: right; */
+    /* background-position: top; */
+    /* background-position: bottom; */
+
+    /* background-position: right top; */
+    /* background-position: left top; */
+    /* background-position: right bottom; */
+    background-position: left bottom;
+
+    /* background-attachment: scroll; */
+    background-attachment: fixed;
+}

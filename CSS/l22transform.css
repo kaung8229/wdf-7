@@ -1,0 +1,110 @@
+:root{
+    --bc: blue;
+    --rc: red;
+}
+
+.div1{
+    width: 100px;
+    height: 80px;
+    background-color: var(--bc);
+
+    transform: rotate(45deg);
+}
+
+.div2{
+    width: 100px;
+    height: 80px;
+    background-color: var(--rc);
+
+    transform: rotate(-45deg);
+}
+
+.div3{
+    width: 100px;
+    height: 80px;
+    background-color: var(--rc);
+
+    transform: rotateX(80deg);
+}
+
+.div4{
+    width: 100px;
+    height: 80px;
+    background-color: var(--rc);
+
+    transform: rotateY(80deg);
+}
+
+.div5{
+    width: 200px;
+    height: 80px;
+    background-color: var(--rc);
+                /* scale(1) -> default */
+    transform: scale(0.5);
+}
+
+.div6{
+    width: 200px;
+    height: 80px;
+    background-color: var(--rc);
+        /* skew work on X axis -> default */
+    transform: skew(20deg);
+    /* transform: skewX(20deg);
+    transform: skewY(20deg); */
+}
+
+.div7{
+    width: 200px;
+    height: 80px;
+    background-color: var(--bc);
+       /* translate work on X axis (defalut) */
+    /* transform: translate(50%);
+    transform: translate(-50%);
+    transform: translateX(50%);
+    transform: translateX(-50%);
+    transform: translateY(50%); */
+    transform: translateY(-50%);
+}
+
+.country{
+    font-size: 20px;
+
+    /* Vendor Prifix Properties */
+    /* chrome, safari, opera -> (-webkit-)
+    opera -> (-o-)
+    internet explorer -> (-ms-)
+    firefox -> (-moz-) */
+
+    -webkit-appearance: none; /* for chrome, safari, opera, some browser... */
+    -moz-appearance: none; /* for firefox */
+    appearance: none;
+
+    padding: 5px 30px 5px 5px;
+    background-image: url("../img/downarrow.png");
+    background-size: 15px; /*background size change*/
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 95%; /*x axis position change*/
+    /* background-position-y: ; y axis position change */
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+/* For Responsive (use @media() ) */
+@media(max-width:600px){
+    
+    h1{
+        font-size: 20px;
+        color: blue;
+    }
+
+    p{
+        color: red;
+    }
+}
